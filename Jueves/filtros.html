@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html ng-app>
+    <head>
+        <meta charset="utf-8">
+        <title>Clase Angular</title>
+        <script type="text/javascript" src="./js/angular.min.js"></script>
+    </head>
+    <body>
+        <script type="text/javascript" src="./js/app.js"></script>
+
+        <!--<h1>Hola mundo</h1>
+        <h1>{{"Hola mundo"}}</h1>-->
+
+        <h4>Filtros de angular</h4>
+        <span>DoNaLdO</span><br>
+        <span>{{"DoNaLdO" | lowercase}}</span><br>
+        <span>{{"DoNaLdO" | uppercase}}</span><br><br>
+
+        <span>1350</span><br>
+        <span>{{1350 | currency}}</span><br><br>
+
+        <span>12345678987654321</span><br>
+        <span>{{12345678987654321 | number}}</span>
+
+        <h4>ng-model in angular</h4>
+        <p>
+            <label> Dime tu nombre</label>
+            <input type="text"ng-model="nombre" placeholder="aquí va tu nombre" size="30">
+        </p>
+
+        <p>
+            <label>Tu nombre es </label>{{nombre | uppercase}}
+        </p>
+
+        <p>
+            <label>Seleccionar país</label>
+            <select ng-model="pais">
+                <option value="México">México</option>
+                <option value="Francia">Francia</option>
+                <option value="Alemania">Alemania</option>
+            </select>
+            <br>
+            <label>Tu pais es </label>{{pais}}
+<br>
+            <label>Seleccione su género</label><br>
+            <input type="radio" value="M" ng-model="genero">Masculino
+            <input type="radio" value="F" ng-model="genero">Femenino
+            <br>
+            <label>Tu genero es </label>{{genero}}
+        </p>
+
+        <p>
+            <label>¿Cuáles son tus pasatiempos?</label>
+            <input type="checkbox" ng-model="op1" value="1">Deportes
+            <input type="checkbox" ng-model="op2" value="2">Leer
+            <input type="checkbox" ng-model="op3" value="3">Musica
+            <br>
+            A ti te gusta hacer deportes: {{op1}};<br>
+            A ti te gusta leer, {{op2}}
+        </p>
+
+
+
+
+    </body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+    <head>
+        <meta charset="utf-8">
+        <title>Clase Angular</title>
+        <link rel="stylesheet" href="./css/materialize.css">
+        <script type="text/javascript" src="./js/angular.min.js"></script>
+    </head>
+    <body ng-controller="movieCtrl as movie">
+        <script type="text/javascript" src="./js/app2.js"></script>
+
+
+        <div class="row">
+            <input type="text" ng-model="search">
+
+            <!--<div class="col s12 m2" ng-repeat="n in movie.nombre | filter: search">
+                <span>{{n.nombre}}</span><br>
+                <span>{{n.edad}}</span>
+            </div> -->
+
+            <!--<div class="col s12 m2" ng-repeat="n in movie.nombre">
+                <span>{{n.nombre}} {{n.edad}} </span>
+            </div>-->
+
+        </div>
+
+
+        <div class="container">
+            <div class="row">
+                <div class="col s12 m2" ng-repeat="m in movie.collection | filter:search | orderBy: 'year':1">
+                    <div class="card">
+
+                        <div class="card-image">
+                          <img src="{{m.img}}">
+                          <span class="card-title">{{m.name}}</span>
+                        </div>
+
+                        <div class="card-content">
+                          <p>{{m.year}} <br> {{m.category}}</p>
+                          <ul ng-repeat="c in m.cast">
+                              <li>{{c}}</li>
+                          </ul>
+                        </div>
+
+                        <div class="card-action">
+                          <a href="#"> Ver película </a>
+                        </div>
+
+                    </div><!--card-->
+                </div><!--col-->
+            </div><!--row-->
+        </div><!--container-->
+
+
+
+    </body>
+</html>
